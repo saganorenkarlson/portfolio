@@ -1,42 +1,28 @@
 import Image from 'next/image'
+import { AboutMe } from './components/AboutMe'
+import { Experience } from './components/Experience'
 
 export default function Home() {
   return (
+    //p-4 md:p-16 lg:px-44
     <main className="flex min-h-screen flex-col items-center justify-center lg-p-24">
-      <div className='flex justify-around svg-background items-center w-full lg:h-screen'>
-        <div className='flex flex-row w-full justify-between p-4 md:p-16 lg:p-36'>
-          <div className='w-[42rem]'>
+      <div className='flex justify-center svg-background items-center w-full h-screen'>
+        <div className='flex flex-col xl:flex-row xl:w-[1200px] xl:justify-between items-center'>
+          <div className='xl:w-3/4 mx-8 xl:m-0'>
             <p className="text-white text-xl">Hi my name is Saga Norén Karlson</p>
-            <p className='text-4xl font-bold'>I am a final year M.Sc student in Media Technology and Engineering
+            <p className='text-3xl lg:text-4xl font-bold pb-2'>I am a final year M.Sc student in Media Technology and Engineering
             </p>
-            <p className='text-sm'>I am looking for a job, please hire me heheheeh. More information maube blablablabalabalklsa
-              skdlösadsadsa kld kls dl s måste skriva mer kanske
-              jklsfd ord ord ordelioord or ordelin opsa kls
-              kdsf</p>
+            <p className='text-sm'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris cursus lacus et augue vehicula laoreet.
+              Donec id feugiat eros, eget pretium ipsum.
+            </p>
           </div>
-          <div>
+          <div className='hidden xl:block'>
             Image
           </div>
         </div>
       </div>
-      <div className='flex flex-row px-4 md:px-16 lg:px-36 lg:pt-36 w-full justify-between h-[40rem]'>
-        <div className='w-2/4 flex flex-col gap-4 '>
-          <p className='text-4xl font-bold text-saga-yellow'>About me</p>
-          <p>I am looking for a job, please hire me heheheeh. More information maube blablablabalabalklsa
-            skdlösadsadsa kld kls dl s måste skriva mer kanske
-            jklsfd ord ord ordelioord or ordelin opsa kls
-            kdsf
-          </p>
-        </div>
-        <div>
-          <img className='h-[33rem] relative -top-8' src='./saga-aboutme.png'></img>
-        </div>
-      </div>
-      <div className='flex flex-row px-4 md:px-16 lg:px-36 lg:pb-36 w-full justify-between'>
-        <div className='w-2/4 flex flex-col gap-4'>
-          <p className='text-4xl font-bold text-saga-yellow'>Experience</p>
-        </div>
-      </div>
+      <AboutMe />
+      <Experience />
     </main>
   )
 }
