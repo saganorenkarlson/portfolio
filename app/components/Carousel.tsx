@@ -84,12 +84,12 @@ export const Carousel = () => {
                     </div>
                 ))}
             </Slider>
-            <div className={`md:w-[440px] w-[340px] h-16 flex justify-between ${isTransitioning && 'invisible'}`}>
+            <div className={`md:w-[440px] w-[340px] h-16 flex justify-between transition-all ease-in-out duration-200 ${isTransitioning ? 'opacity-0' : 'opacity-full'}`}>
                 <button className='cursor-pointer relative md:bottom-64' onClick={sliderRef?.slickPrev}>
-                    <FontAwesomeIcon size={'2xl'} icon={faCircleArrowLeft} color='#e5e7eb' />
+                    <FontAwesomeIcon className='text-6xl md:text-4xl' size={'2xl'} icon={faCircleArrowLeft} color='#e5e7eb' />
                 </button>
                 <button className='cursor-pointer relative md:bottom-64' onClick={sliderRef?.slickNext}>
-                    <FontAwesomeIcon size={'2xl'} icon={faCircleArrowRight} color='#e5e7eb' />
+                    <FontAwesomeIcon className='text-6xl md:text-4xl' size={'2xl'} icon={faCircleArrowRight} color='#e5e7eb' />
                 </button>
             </div>
             <ProjectDialog item={selectedItem} handleClose={() => setShowModal(false)} showModal={showModal} />
