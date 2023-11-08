@@ -12,12 +12,50 @@ const Navbar = () => {
     const handleScroll = () => {
         const newOpacity = Math.min(0.7, (window.scrollY - 400) / 400);
         setOpacity(newOpacity);
+
+        const targetElement = document.getElementById('experience');
+        const adjacentTargetElement = document.getElementById('about-me');
+        const body = document.body;
+        const html = document.documentElement;
+
+        if (targetElement && adjacentTargetElement) {
+            const targetPosition = targetElement.offsetTop;
+            const currentPositionBottom = window.scrollY + window.innerHeight;
+            const currentPositionTop = window.scrollY;
+
+            const pageHeight = Math.max(body.scrollHeight, body.offsetHeight, html.clientHeight, html.scrollHeight, html.offsetHeight);
+            const scrollPosition = window.scrollY + window.innerHeight;
+
+            console.log(targetPosition, currentPositionBottom, currentPositionTop, targetElement.offsetHeight)
+
+            if (currentPositionBottom >= (targetPosition + targetElement.offsetHeight / 4) && currentPositionTop <= targetPosition + targetElement.offsetHeight / 4 && scrollPosition < pageHeight - 10) {
+                body.classList.add('bg-saga-green');
+                targetElement.classList.add('text-white');
+                adjacentTargetElement.classList.add('text-white');
+                body.classList.remove('bg-white');
+                targetElement.classList.remove('text-black');
+                adjacentTargetElement.classList.remove('text-black');
+            } else {
+                body.classList.add('bg-white');
+                targetElement.classList.add('text-black');
+                adjacentTargetElement.classList.add('text-black');
+                body.classList.remove('bg-saga-green');
+                targetElement.classList.remove('text-white');
+                adjacentTargetElement.classList.remove('text-white');
+            }
+        }
     };
 
     useEffect(() => {
         window.addEventListener('scroll', handleScroll);
 
-        return () => window.removeEventListener('scroll', handleScroll);
+        document.body.classList.add('bg-white');
+
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+            document.body.classList.remove('bg-white', 'bg-[#006450]');
+        }
+
     }, []);
 
     const handleScrollNavigation = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>, targetId: string) => {

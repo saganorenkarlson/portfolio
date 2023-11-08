@@ -24,6 +24,7 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb)); */
+      transition: background-color 0.3s ease-in-out; /* Adjust duration and easing function as needed */
 }
 
 .svg-background {
