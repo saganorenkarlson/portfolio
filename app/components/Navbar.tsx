@@ -26,8 +26,6 @@ const Navbar = () => {
             const pageHeight = Math.max(body.scrollHeight, body.offsetHeight, html.clientHeight, html.scrollHeight, html.offsetHeight);
             const scrollPosition = window.scrollY + window.innerHeight;
 
-            console.log(targetPosition, currentPositionBottom, currentPositionTop, targetElement.offsetHeight)
-
             if (currentPositionBottom >= (targetPosition + targetElement.offsetHeight / 4) && currentPositionTop <= targetPosition + targetElement.offsetHeight / 4 && scrollPosition < pageHeight - 10) {
                 body.classList.add('bg-saga-green');
                 targetElement.classList.add('text-white');
@@ -92,20 +90,20 @@ const Navbar = () => {
 
     return (
         <div className='fixed font-bold w-full bg-white h-20 top-0 left-0 p-6 z-50' style={{ backgroundColor: `rgba(255, 255, 255, ${isMenuOpen ? 1 : opacity})` }}>
-            <div className='hidden md:flex gap-10 md:gap-4 justify-end'>
+            <div className='text-black hidden md:flex gap-10 md:gap-4 justify-end'>
                 <button className='flex items-center gap-1 group hover:text-gray-600' onClick={(e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => handleScrollNavigation(e, 'home')}>
                     <FontAwesomeIcon className='group-hover:text-gray-600 text-2xl md:text-sm' icon={faHouse} ></FontAwesomeIcon>
                     <p> Home </p>
                 </button>
-                <button className='flex items-center gap-1 group hover:text-gray-600' onClick={(e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => handleScrollNavigation(e, 'about-me')}>
+                <button className='text-black flex items-center gap-1 group hover:text-gray-600' onClick={(e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => handleScrollNavigation(e, 'about-me')}>
                     <FontAwesomeIcon className='group-hover:text-gray-600 text-2xl md:text-sm' icon={faUser} color='black' ></FontAwesomeIcon>
                     <p>About me</p>
                 </button>
-                <button className='flex items-center gap-1 group hover:text-gray-600' onClick={(e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => handleScrollNavigation(e, 'experience')}>
+                <button className='text-black flex items-center gap-1 group hover:text-gray-600' onClick={(e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => handleScrollNavigation(e, 'experience')}>
                     <FontAwesomeIcon className='group-hover:text-gray-600 text-2xl md:text-sm' icon={faTableList} ></FontAwesomeIcon>
                     <p>Experience</p>
                 </button>
-                <button className='flex items-center gap-1 group hover:text-gray-600' onClick={(e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => handleScrollNavigation(e, 'projects')}>
+                <button className='text-black flex items-center gap-1 group hover:text-gray-600' onClick={(e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => handleScrollNavigation(e, 'projects')}>
                     <FontAwesomeIcon className='group-hover:text-gray-600 text-2xl md:text-sm' icon={faLaptopCode} ></FontAwesomeIcon>
                     <p>Projects</p>
                 </button>

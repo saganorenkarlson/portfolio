@@ -26,10 +26,10 @@ const ProjectDialog: React.FC<IProjectDialog> = ({ showModal, handleClose, item 
                         <FontAwesomeIcon className='cursor-pointer hover:text-saga-yellow' onClick={handleClose} icon={faXmark} size='2xl' color='gray' />
                     </div>
                     <div>
-                        <p className='font-bold'>Project for the course TDDD4 Object programming</p>
+                        <p className='font-bold text-black'>Project for the course TDDD4 Object programming</p>
                     </div>
                 </div>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris cursus lacus et augue vehicula laoreet.
+                <p className='text-black'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris cursus lacus et augue vehicula laoreet.
                     Donec id feugiat eros, eget pretium ipsum. Nulla non posuere sapien. Ut dapibus sapien vitae lacus fringilla vehicula.
                     Aenean vel justo fringilla, porttitor magna sed, porttitor ipsum. Nunc luctus scelerisque nisl sit amet vehicula.
                     Etiam maximus lacus ac turpis aliquet semper. Nulla non posuere sapien. Ut dapibus sapien vitae lacus fringilla vehicula.
@@ -46,7 +46,7 @@ const ProjectDialog: React.FC<IProjectDialog> = ({ showModal, handleClose, item 
                     Aenean vel justo fringilla, porttitor magna sed, porttitor ipsum. Nunc luctus scelerisque nisl sit amet vehicula.
                     Etiam maximus lacus ac turpis aliquet semper.
                 </p>
-                <div className='flex pb-4 gap-4'>
+                <div className='flex pb-4 gap-4 text-black'>
                     <div className='rounded-2xl px-3 py-2 bg-gray-200'><FontAwesomeIcon icon={faReact} size='lg' color='black' /> React.js</div>
                     <div className='rounded-2xl px-3 py-2 bg-gray-200'><FontAwesomeIcon icon={faNodeJs} size='lg' color='black' /> Node.js</div>
                 </div>
