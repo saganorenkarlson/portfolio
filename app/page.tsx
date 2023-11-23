@@ -5,8 +5,28 @@ import Projects from './components/Projects'
 import Navbar from './components/Navbar'
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { fetchExperiences, ExperienceEntry, fetchProjects, ProjectEntry } from '../utils';
 
-export default function Home() {
+export const getExperiences = async () => {
+  const experiences = await fetchExperiences();
+  return {
+    experiences,
+    revalidate: 60,
+  };
+};
+
+export const getProjects = async () => {
+  const projects = await fetchProjects();
+  return {
+    projects,
+    revalidate: 60,
+  };
+};
+
+export default async function Home() {
+  const experiences: ExperienceEntry[] = (await getExperiences()).experiences;
+  const projects: ProjectEntry[] = (await getProjects()).projects;
+
   return (
     <main className="flex min-h-screen flex-col items-center justify-center lg-p-24">
       <Navbar />
@@ -34,8 +54,8 @@ export default function Home() {
         </div>
       </div>
       <AboutMe />
-      <Experience />
-      <Projects />
+      <Experience experiences={experiences} />
+      <Projects projects={projects} />
     </main>
   )
 }

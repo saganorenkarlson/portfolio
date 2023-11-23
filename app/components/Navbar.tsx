@@ -91,8 +91,8 @@ const Navbar = () => {
     return (
         <div className='fixed font-bold w-full bg-white h-20 top-0 left-0 p-6 z-50' style={{ backgroundColor: `rgba(255, 255, 255, ${isMenuOpen ? 1 : opacity})` }}>
             <div className='text-black hidden md:flex gap-10 md:gap-4 justify-end'>
-                <button className='flex items-center gap-1 group hover:text-gray-600' onClick={(e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => handleScrollNavigation(e, 'home')}>
-                    <FontAwesomeIcon className='group-hover:text-gray-600 text-2xl md:text-sm' icon={faHouse} ></FontAwesomeIcon>
+                <button className='text-black flex items-center gap-1 group hover:text-gray-600' onClick={(e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => handleScrollNavigation(e, 'home')}>
+                    <FontAwesomeIcon className='group-hover:text-gray-600 text-2xl md:text-sm' icon={faHouse} color='black' ></FontAwesomeIcon>
                     <p> Home </p>
                 </button>
                 <button className='text-black flex items-center gap-1 group hover:text-gray-600' onClick={(e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => handleScrollNavigation(e, 'about-me')}>
@@ -100,11 +100,11 @@ const Navbar = () => {
                     <p>About me</p>
                 </button>
                 <button className='text-black flex items-center gap-1 group hover:text-gray-600' onClick={(e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => handleScrollNavigation(e, 'experience')}>
-                    <FontAwesomeIcon className='group-hover:text-gray-600 text-2xl md:text-sm' icon={faTableList} ></FontAwesomeIcon>
+                    <FontAwesomeIcon className='group-hover:text-gray-600 text-2xl md:text-sm' icon={faTableList} color='black' ></FontAwesomeIcon>
                     <p>Experience</p>
                 </button>
                 <button className='text-black flex items-center gap-1 group hover:text-gray-600' onClick={(e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => handleScrollNavigation(e, 'projects')}>
-                    <FontAwesomeIcon className='group-hover:text-gray-600 text-2xl md:text-sm' icon={faLaptopCode} ></FontAwesomeIcon>
+                    <FontAwesomeIcon className='group-hover:text-gray-600 text-2xl md:text-sm' icon={faLaptopCode} color='black' ></FontAwesomeIcon>
                     <p>Projects</p>
                 </button>
             </div>
