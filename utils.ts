@@ -1,4 +1,4 @@
-import { Asset, createClient, Entry } from 'contentful';
+import { Asset, createClient } from 'contentful';
 
 const client = createClient({
     space: process.env.SPACE_ID ?? '',
@@ -32,8 +32,8 @@ export interface ProjectEntry {
     year: string;
     media: Asset[];
     thumbnail: Asset;
+    video: boolean;
 }
-
 
 export const fetchExperiences = async () => {
     const response = await client.getEntries<ContentfulExperienceEntry>({ content_type: 'experience' });
