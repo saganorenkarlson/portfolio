@@ -1,10 +1,8 @@
 import React from 'react'
-import Image from 'next/image'
-
 
 export const AboutMe = () => {
     return (
-        <div id='about-me' className='flex items-center xl:w-[1200px] m-8 xl:h-screen '>
+        <div id='about-me' className='flex items-center xl:w-[1200px] m-8 xl:h-screen'>
             <div className='flex flex-col md:flex-row justify-between'>
                 <div className='md:w-2/4 flex flex-col gap-4'>
                     <p className='text-3xl lg:text-4xl font-bold text-saga-yellow mb-10'>About me</p>
@@ -22,7 +20,7 @@ export const AboutMe = () => {
                     </p>
                 </div>
                 <div className='flex md:block justify-end'>
-                    <Image height={591} width={395} alt='Picture of Saga' src='/saga-aboutme.png'></Image>
+                    <img height={591} width={395} alt='Picture of Saga' src='/saga-aboutme.png'></img>
                 </div>
             </div>
         </div>)

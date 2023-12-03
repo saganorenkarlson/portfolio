@@ -46,8 +46,8 @@ export const Carousel: React.FC<CarouselProps> = ({ projects, handleItemClick })
                         <div onClick={() => handleItemClick(item)} className={`mx-12 md:mx-40 3xl:mx-64 h-full rounded-3xl flex flex-col justify-between overflow-hidden relative ${isCenter(index) ? 'bg-saga-yellow transition-colors ease-in duration-500 transform selected-project cursor-pointer pointer-events-auto' : 'border-2 pointer-events-none'}`}>
                             <p className={`font-bold text-2xl p-4 3xl:p-6 3xl:pb-0 pb-0 ${isCenter(index) ? 'text-white' : 'text-gray-400'}`}>{item.title}</p>
                             <p className={`text-xl px-4 3xl:px-6 ${isCenter(index) ? 'text-white' : 'text-gray-400'}`}>{item.subtitle}</p>
-                            <div className='h-[200px] md:h-[280px] 3xl:h-[500px] m-4 3xl:m-6'>
-                                <Image unoptimized className={`h-full w-full object-cover object-left-top rounded-3xl ${isCenter(index) ? 'visible' : 'invisible'}`} width={256} height={280} alt='Project picture' src={`https:${item.thumbnail.fields.file?.url}`}></Image>
+                            <div className='h-[200px] md:h-[280px] 3xl:h-[500px] m-4 3xl:m-6 relative'>
+                                <Image unoptimized className={`object-cover object-left-top rounded-3xl ${isCenter(index) ? 'visible' : 'invisible'}`} fill alt='Project picture' src={`https:${item.thumbnail.fields.file?.url}`}></Image>
                             </div>
                         </div>
                         <div className={`flex pt-2 text-gray-400 justify-center ${!isCenter(index) && 'invisible'}`}>

@@ -24,7 +24,7 @@ export const Experience: React.FC<ExperienceProps> = ({ experiences }) => {
                         <div className='flex gap-4'>
                         {(item?.techniques ?? []).map((technique) =>
                             <div key={technique.fields.title} className='rounded-2xl px-3 py-2 flex items-center bg-white bg-opacity-20'>
-                                {technique.fields.logo ? <Image height={20} className='w-auto h-[20px]' width={20} alt='Technique' src={`https:${technique.fields.logo.fields.file?.url}`}></Image>
+                                {technique.fields.logo ? <img height={20} className='w-auto h-[20px]' width={20} alt='Technique' src={`https:${technique.fields.logo.fields.file?.url}`}></img>
                                     : null}
                             </div>
                         )}
