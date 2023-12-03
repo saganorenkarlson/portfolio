@@ -48,8 +48,10 @@ export default async function Home() {
               </a>
             </div>
           </div>
-          <div className='hidden xl:block'>
-            Image
+          <div className='hidden xl:flex mb-8 rounded-full  overflow-hidden w-[400px] h-[400px]'>
+            <div className='hidden xl:block rounded-full bg-white w-[300px] h-[300px]'>
+            <Image className="" unoptimized width={1000} height={1400} alt='Saga Norén Karlson' src='/saga-2.webp'></Image>
+            </div>
           </div>
         </div>
       </div>

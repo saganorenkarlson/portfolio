@@ -5,6 +5,16 @@ const client = createClient({
     accessToken: process.env.CONTENT_ACCESS_TOKEN ?? '',
 });
 
+interface ContentfulTechniqueEntry {
+    fields: TechniqueEntry;
+    contentTypeId: string;
+}
+
+export interface TechniqueEntry {
+    title: string;
+    logo: Asset;
+}
+
 interface ContentfulExperienceEntry {
     fields: ExperienceEntry;
     contentTypeId: string;
@@ -15,6 +25,7 @@ export interface ExperienceEntry {
     title: string;
     company: string;
     description: string;
+    techniques: ContentfulTechniqueEntry[];
 }
 
 interface ContentfulProjectEntry {
@@ -33,6 +44,7 @@ export interface ProjectEntry {
     media: Asset[];
     thumbnail: Asset;
     video: boolean;
+    techniques: ContentfulTechniqueEntry[];
 }
 
 export const fetchExperiences = async () => {
