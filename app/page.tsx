@@ -8,24 +8,24 @@ import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { fetchExperiences, ExperienceEntry, fetchProjects, ProjectEntry } from '../utils';
 
-
-export const getExperiences = async () => {
-  const experiences = await fetchExperiences();
-  return {
-    experiences,
-    revalidate: 60,
-  };
-};
-
-export const getProjects = async () => {
-  const projects = await fetchProjects();
-  return {
-    projects,
-    revalidate: 60,
-  };
-};
-
 export default async function Home() {
+
+  const getExperiences = async () => {
+    const experiences: ExperienceEntry[] = await fetchExperiences();
+    return {
+      experiences,
+      revalidate: 60,
+    };
+  };
+
+  const getProjects = async () => {
+    const projects: ProjectEntry[] = await fetchProjects();
+    return {
+      projects,
+      revalidate: 60,
+    };
+  };
+
   const experiences: ExperienceEntry[] = (await getExperiences()).experiences;
   const projects: ProjectEntry[] = (await getProjects()).projects;
 
@@ -52,7 +52,7 @@ export default async function Home() {
           </div>
           <div className='hidden xl:flex mb-8 rounded-full  overflow-hidden w-[400px] h-[400px]'>
             <div className='hidden xl:block rounded-full bg-white w-[300px] h-[300px]'>
-            <Image priority width={1000} height={1400} alt='Saga Norén Karlson' src='/saga-2.webp'></Image>
+              <Image priority width={1000} height={1400} alt='Saga Norén Karlson' src='/saga-2.webp'></Image>
             </div>
           </div>
         </div>
