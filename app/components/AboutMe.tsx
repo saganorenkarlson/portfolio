@@ -17,7 +17,6 @@ export const AboutMe = () => {
                         In my studies, I&apos;ve covered a wide range of topics from AI to machine learning and network security.
                         I have also gained a passion for software development which I have explored during the summers doing internships and by doing my own projects,
                         for example this website. Please look around, and don&apos;t hesitate to reach out if you have any questions.
-
                     </p>
                 </div>
                 <ImageAOS/>

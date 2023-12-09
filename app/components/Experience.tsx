@@ -1,6 +1,5 @@
 import { ExperienceEntry } from '@/utils';
 import React from 'react'
-import Image from 'next/image'
 
 interface ExperienceProps {
     experiences: ExperienceEntry[];

@@ -46,7 +46,6 @@ const Navbar = () => {
 
     useEffect(() => {
         window.addEventListener('scroll', handleScroll);
-
         document.body.classList.add('bg-white');
 
         return () => {
