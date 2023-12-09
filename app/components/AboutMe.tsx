@@ -1,4 +1,5 @@
 import React from 'react'
+import { ImageAOS } from './ImageAOS'
 
 export const AboutMe = () => {
     return (
@@ -19,9 +20,7 @@ export const AboutMe = () => {
 
                     </p>
                 </div>
-                <div className='flex md:block justify-end'>
-                    <img height={591} width={395} alt='Picture of Saga' src='/saga-aboutme.png'></img>
-                </div>
+                <ImageAOS/>
             </div>
         </div>)
 }

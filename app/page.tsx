@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import 'aos/dist/aos.css';
 import { AboutMe } from './components/AboutMe'
 import { Experience } from './components/Experience'
 import Projects from './components/Projects'
@@ -6,6 +7,7 @@ import Navbar from './components/Navbar'
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { fetchExperiences, ExperienceEntry, fetchProjects, ProjectEntry } from '../utils';
+
 
 export const getExperiences = async () => {
   const experiences = await fetchExperiences();
@@ -32,7 +34,7 @@ export default async function Home() {
       <Navbar />
       <div id='home' className='flex justify-center svg-background items-center w-full h-screen'>
         <div className='flex flex-col xl:flex-row xl:w-[1200px] xl:justify-between items-center'>
-          <div className='xl:w-3/4 mx-8 xl:m-0'>
+          <div className='xl:w-3/4 mx-8 xl:me-4'>
             <p className="text-white text-xl">Hi my name is Saga Norén Karlson</p>
             <p className='text-black text-3xl lg:text-4xl font-bold pb-2'>I am a final year engineering student
             </p>

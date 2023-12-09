@@ -29,8 +29,8 @@ const ProjectDialog: React.FC<IProjectDialog> = ({ showModal, handleClose, item 
                     <div className='flex gap-2 flex-col'>
                         <p className='font-bold text-black'>{item?.description} {item?.year}</p>
                         <div className='flex flex-col xxs:flex-row flex-1 xxs:flex-none gap-2 xxs:gap-4 md:hidden overflow-hidden'>
-                            {item?.github ? <a href={item.github} target='_blank' className='rounded-xl px-2 py-1 h-fit hover:bg-gray-200 cursor-pointer border-black border'><FontAwesomeIcon  icon={faGithub} size='lg' color='black' /> View on Github</a> : null}
-                            {item?.link ? <a href={item.link} target='_blank' className='rounded-xl px-2 py-1 hover:bg-gray-200 cursor-pointer border-black border'><FontAwesomeIcon icon={faArrowUpRightFromSquare} size='lg' color='black' /> View website </a> : null}
+                            {item?.github ? <a href={item.github} target='_blank' className='flex gap-2 items-center rounded-lg px-3 py-2 h-fit hover:bg-gray-200 cursor-pointer border-black border'><FontAwesomeIcon icon={faGithub} size='lg' color='black' /> View on Github</a> : null}
+                            {item?.link ? <a href={item.link} target='_blank' className='flex gap-2 items-center rounded-lg px-3 py-2 hover:bg-gray-200 cursor-pointer border-black border'><FontAwesomeIcon icon={faArrowUpRightFromSquare} size='lg' color='black' /> View website </a> : null}
                         </div>
                     </div>
                 </div>
