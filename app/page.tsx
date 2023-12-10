@@ -1,9 +1,10 @@
-import Image from 'next/image'
+import Image from 'next/image';
 import 'aos/dist/aos.css';
-import { AboutMe } from './components/AboutMe'
-import { Experience } from './components/Experience'
-import Projects from './components/Projects'
-import Navbar from './components/Navbar'
+import { AboutMe } from './components/AboutMe';
+import { Experience } from './components/Experience';
+import { Contact } from './components/Contact';
+import Projects from './components/Projects';
+import Navbar from './components/Navbar';
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { fetchExperiences, ExperienceEntry, fetchProjects, ProjectEntry } from '../utils';
@@ -60,6 +61,7 @@ export default async function Home() {
       <AboutMe />
       <Experience experiences={experiences} />
       <Projects projects={projects} />
+      <Contact/>
     </main>
   )
 }
