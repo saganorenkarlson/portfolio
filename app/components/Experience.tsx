@@ -14,8 +14,8 @@ export const Experience: React.FC<ExperienceProps> = ({ experiences }) => {
             </div>
             <div className="flex flex-nowrap md:flex-wrap flex-col 2xl:h-[500px] md:h-[700px]">
                 {experiences.map((item, index) => (
-                    <div key={item.title} className={`md:w-1/2 ${index % 2 === 0 ? 'mb-4' : ''}`}>
-                        <div className="py-4 pr-4">
+                    <div key={item.title} className={`md:w-1/2 ${index % 2 === 0 ? 'mb-4' : ''}  ${index < 2 ? 'md:pr-4' : 'md:pl-4'} `}>
+                        <div className="py-4">
                             <p>{item.period}</p>
                             <h3 className="font-bold text-2xl">{item.title}, {item.company}</h3>
                             <p>{item.description}</p>
